@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сравнение библиотек даты/времени</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/tempus/min/tempus.min.js"></script>
+    <script type="text/javascript" src="js/benchmark.js"></script>
+    <script type="text/javascript" src="js/tests.js"></script>
+</head>
+<body>
+    <h1>Сравнение библиотек даты/времени</h1>
+    <p>Версии библиотек</p>
+    <ul>
+        <li>Moment - 2.4.0</li>
+        <li>Tempus - 0.2.11</li>
+    </ul>
+    <table class="bordered">
+        <thead>
+            <tr>
+                <th>Описание</th>
+                <th>Чистый JS</th>
+                <th>Moment</th>
+                <th>Tempus</th>
+                <th>Тест</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Получить текущую дату</td>
+                <td>var t = new Date();</td>
+                <td>var t = moment();</td>
+                <td>var t = tempus();</td>
+                <td><button onclick="testNow()">Старт</button></td>
+            </tr>
+            <tr>
+                <td>Получаем дату из объекта Date</td>
+                <td>var t = new Date();</td>
+                <td>var t = moment(new Date());</td>
+                <td>var t = tempus(new Date());</td>
+                <td><button onclick="testFromDate()">Старт</button></td>
+            </tr>
+            <tr>
+                <td>Получаем дату из строки</td>
+                <td>var t = new Date('2013-01-01');</td>
+                <td>var t = moment('2013-01-01');</td>
+                <td>var t = tempus('2013-01-01');</td>
+                <td><button onclick="testFromString()">Старт</button></td>
+            </tr>
+            <tr>
+                <td>Получаем дату из строки по формату</td>
+                <td>-</td>
+                <td>var t = moment('2013-01-01', 'YYYY-MM-DD');</td>
+                <td>var t = tempus('2013-01-01', '%Y-%m-%d');</td>
+                <td><button onclick="testFromStringWithFormat()">Старт</button></td>
+            </tr>
+            <tr>
+                <td>Валидация</td>
+                <td>-</td>
+                <td>var t = moment('2012-05-25', 'YYYY-MM-DD').isValid();</td>
+                <td>var t = tempus('2012-05-25', '%Y-%m-%d').validate();</td>
+                <td><button onclick="testValidate()">Старт</button></td>
+            </tr>
+            <tr>
+                <td>Отобразить текущую дату в формате ДД.ММ.ГГГГ</td>
+                <td>var d = new Date();<br />
+                    var t = d.getDate() + '.' + (d.getMonth() + 1) + '.' + d.getFullYear();</td>
+                <td>var t = moment().format('DD.MM.GGGG')</td>
+                <td>var t = tempus().format('%d.%m.%Y')</td>
+                <td><button onclick="testFormat()">Старт</button></td>
+            </tr>
+        </tbody>
+    </table>
+<script>
+
+</script>
+</body>
+</html>

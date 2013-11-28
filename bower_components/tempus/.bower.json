@@ -1,0 +1,26 @@
+{
+  "name": "tempus",
+  "version": "0.2.11",
+  "homepage": "https://github.com/crusat/tempus-js",
+  "authors": [
+    "Kuznetsov Aleksey <me@akuzn.com>"
+  ],
+  "description": "JS library for most comfortable using date/time.",
+  "main": "src/tempus.js",
+  "keywords": [
+    "date",
+    "time",
+    "datetime"
+  ],
+  "dependencies": {},
+  "license": "MIT",
+  "_release": "0.2.11",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.11",
+    "commit": "63e94b044d5083860cdd91ce8d9ea9dc14227ce0"
+  },
+  "_source": "git://github.com/crusat/tempus-js.git",
+  "_target": "~0.2.2",
+  "_originalSource": "tempus"
+}
